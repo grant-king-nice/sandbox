@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<project default="jsf-sample" basedir=".">
+
+
+
+	<target name="jsf-sample">
+		<copy file="./nice-jsf-portlet/target/nice-jsf-portlet-0.0.1-SNAPSHOT.war"
+			toFile="/Users/gking/Desktop/WFO_platform/liferay-portal-6.1.1-ce-ga2/deploy/nice-jsf-portlet.war" />
+	</target>
+
+
+
+	<target name="jsf-sample-composite">
+		<copy
+			file="./nice-jsf-composite-portlet/target/nice-jsf-composite-portlet-0.0.1-SNAPSHOT.war"
+			toFile="/Users/gking/Desktop/WFO_platform/liferay-portal-6.1.1-ce-ga2/deploy/nice-jsf-composite-portlet.war" />
+	</target>
+
+
+
+</project>
