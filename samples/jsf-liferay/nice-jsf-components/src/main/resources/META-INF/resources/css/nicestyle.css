@@ -1,0 +1,25 @@
+
+
+.header-text {
+	color:red;
+}
+
+.generic-rate{
+	color:blue;
+}
+
+.generic-rate:hover{
+	color:green;
+	cursor: pointer;
+}
+
+.generic-head-table{
+	width:100%;
+}
+
+.generic-head-column{
+	width:70%;
+}
+.custom-head-class{
+	width:30%;
+}

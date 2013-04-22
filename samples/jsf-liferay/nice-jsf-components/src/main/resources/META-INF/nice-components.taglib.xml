@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<facelet-taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+	version="2.0">
+	<namespace>http://nice/web-component</namespace>
+
+	<tag>
+		<tag-name>liferay-portlet</tag-name>
+		<component>
+			<component-type>nice.LiferayDynamicPortletComponent</component-type>
+			<renderer-type>com.nice.LiferayDynamicPortletComponent</renderer-type>
+		</component>
+	</tag>
+
+    <tag>
+		<tag-name>tabset</tag-name>
+		<component>
+			<component-type>nice.TabsetComponent</component-type>
+			<renderer-type>com.nice.TabsetRenderer</renderer-type>
+		</component>
+	</tag>
+    <tag>
+		<tag-name>tab</tag-name>
+		<component>
+			<component-type>nice.TabComponent</component-type>
+			<renderer-type>com.nice.TabRenderer</renderer-type>
+		</component>
+	</tag>
+    <tag>
+		<tag-name>grid</tag-name>
+		<component>
+			<component-type>nice.GridComponent</component-type>
+			<renderer-type>com.nice.GridRenderer</renderer-type>
+		</component>
+	</tag>
+
+</facelet-taglib>

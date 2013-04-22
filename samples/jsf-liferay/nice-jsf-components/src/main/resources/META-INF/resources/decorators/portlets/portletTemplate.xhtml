@@ -1,0 +1,43 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+	<h:head>
+		<h:outputStylesheet library="css" name="nicestyle.css" target="head" />
+	</h:head>
+
+	<f:subview id="portletForm">
+			
+			<h:panelGroup>
+				<h:panelGrid columns="2" columnClasses="generic-head-column,custom-head-class"  styleClass="generic-head-table">
+					<h:panelGroup>
+						<p class="generic-rate">Rate this NICE portlet</p>
+					</h:panelGroup>
+					<h:panelGroup>
+						<ui:insert name="header" />
+					</h:panelGroup>
+				</h:panelGrid>
+			</h:panelGroup>
+			
+			
+			<h:panelGroup>
+				<ui:insert name="mainBody" />
+			</h:panelGroup>
+			
+			
+			
+			<h:panelGroup>
+				<BR/>
+				This is a generic footer...
+				<BR/>
+				<h:messages/>
+				<BR/>
+				<ui:insert name="footer" />
+			</h:panelGroup>
+
+	</f:subview>
+</f:view>
+
+
