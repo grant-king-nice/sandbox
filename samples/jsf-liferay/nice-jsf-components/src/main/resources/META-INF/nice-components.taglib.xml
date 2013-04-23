@@ -34,5 +34,19 @@
 			<renderer-type>com.nice.GridRenderer</renderer-type>
 		</component>
 	</tag>
+    <tag>
+		<tag-name>clientdata</tag-name>
+		<component>
+			<component-type>nice.ClientDataSourceComponent</component-type>
+			<renderer-type>com.nice.ClientDataSourceRenderer</renderer-type>
+		</component>
+	</tag>
+    <tag>
+		<tag-name>remotedata</tag-name>
+		<component>
+			<component-type>nice.RemoteDataSourceComponent</component-type>
+			<renderer-type>com.nice.RemoteDataSourceRenderer</renderer-type>
+		</component>
+	</tag>
 
 </facelet-taglib>

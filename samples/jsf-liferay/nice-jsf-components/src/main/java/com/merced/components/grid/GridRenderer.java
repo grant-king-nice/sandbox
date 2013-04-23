@@ -1,6 +1,7 @@
 package com.merced.components.grid;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.faces.component.UIComponent;
@@ -28,28 +29,28 @@ public class GridRenderer extends Renderer {
 		
 		writer.startElement("div", null);
 		writer.writeAttribute("id", "grid", null);
-		writer.writeAttribute("style", "height: 380px", null);
+		//writer.writeAttribute("style", "height: 380px", null);
 		
 		
 		writer.endElement("div");
 		writer.endElement("div");
 		
-		writeScript(writer, gridComponent);
+		writeScript(context, gridComponent);
 		
 		writer.endElement("div");
 		
 	}
 
 
-	private void writeScript(ResponseWriter writer, GridComponent component) throws IOException {
+	private void writeScript(FacesContext context, GridComponent component) throws IOException {
+		ResponseWriter writer = context.getResponseWriter();
 		writer.startElement("script", null);
 		
 		writer.write("$(document).ready(function() {");
 		writer.write("$(\"#grid\").kendoGrid({");
-		writer.write("dataSource: {");
-		writer.write("data: createRandomData(50),");
-		writer.write("pageSize: 10");
-		writer.write("},");
+		
+		encodeScriptChildren(context, component);
+
 		writer.write("groupable: "+component.getGroupable()+",");
 		writer.write("sortable: "+component.getSortable()+",");
 		writer.write("pageable: {");
@@ -75,6 +76,33 @@ public class GridRenderer extends Renderer {
 		writer.write("] }); });");
 		writer.endElement("script");
 	}
+
+
+	public void encodeScriptChildren(FacesContext context, UIComponent component) throws IOException {
+		ResponseWriter writer = context.getResponseWriter();
+		if (component.getChildCount() > 0) {
+        	Iterator<UIComponent> kids = component.getChildren().iterator();
+        	while (kids.hasNext()) {
+        	    UIComponent kid = kids.next();
+        	    kid.encodeAll(context);
+        	    writer.write(",");
+        	}
+        }
+		
+	}
+
+
+	@Override
+	public boolean getRendersChildren() {
+		return true;
+	}
+
+
+	@Override
+	public void encodeChildren(FacesContext context, UIComponent component) throws IOException {
+	}
+	
+	
 	
 	
 	
