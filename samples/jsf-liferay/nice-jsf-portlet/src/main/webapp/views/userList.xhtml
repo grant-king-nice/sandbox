@@ -17,7 +17,7 @@
    		<h:panelGroup layout="block">
    		
     		<nice:grid columns="#{userListBean.columns}" groupable="true" sortable="true">
-    			<nice:remotedata service="http://localhost:8080/delegate/userlist/users" serverPaging="true"/>
+    			<nice:remotedata service="/delegate/userlist/users" serverPaging="true"/>
     		</nice:grid>
     		
     	</h:panelGroup>
