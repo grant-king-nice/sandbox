@@ -1,9 +1,5 @@
 package com.nice.liferay.portlet.userlist;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +17,8 @@ public class UserListController {
 
 	@Autowired
 	private SecurityService securityService;
+	@Autowired
+	private FakeUserDataService fakeUserDataService;
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public @ResponseBody JSONPayload getUsers(HttpServletRequest request, @RequestParam("page") int page,  @RequestParam("pageSize") int pageSize,  @RequestParam("take") int take,  @RequestParam("skip") int skip) {
@@ -30,16 +28,9 @@ public class UserListController {
 			return null;
 		}
 	
-		return new JSONPayload(getFakeUserList(take, skip), 200);
+		return new JSONPayload(fakeUserDataService.getFakeUserList(take, skip), 200);
 	}
 	
-	private List<SampleUser> getFakeUserList(int take, int skip){
-		List<SampleUser> list = new ArrayList<SampleUser>();
-		for(int count = skip; count<skip+take; count++){
-			list.add(new SampleUser("first_"+count, "last_"+count, "city_"+count, "title_"+count ,count));
-		}
-		return list;
-	}
 	
 	
 }

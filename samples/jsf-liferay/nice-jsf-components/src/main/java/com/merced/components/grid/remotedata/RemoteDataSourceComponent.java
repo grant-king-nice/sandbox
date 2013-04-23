@@ -5,13 +5,15 @@ import java.io.Serializable;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UIComponentBase;
 
+import com.merced.components.grid.DataProvider;
+
 @FacesComponent(value = "nice.RemoteDataSourceComponent")
 public class RemoteDataSourceComponent extends UIComponentBase implements Serializable {
 
 	private static final long serialVersionUID = 2694366393705651062L;
 
 	enum PropertyKeys {
-		service,serverPaging;
+		service,serverPaging,fallback;
 	}
 	
 	
@@ -36,5 +38,15 @@ public class RemoteDataSourceComponent extends UIComponentBase implements Serial
 	public void setServerPaging(Boolean serverPaging) {
 		getStateHelper().put(PropertyKeys.serverPaging, serverPaging);
 	}
+	
+	public DataProvider<?> getFallback() {
+		return (DataProvider<?>) getStateHelper().eval(PropertyKeys.fallback, null);
+	}
+
+	public void setFallback(DataProvider<?> fallback) {
+		getStateHelper().put(PropertyKeys.fallback, fallback);
+	}
+	
+	
 	
 }

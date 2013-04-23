@@ -10,13 +10,15 @@ public class GridColumn implements Serializable{
 	private long width;
 	private String title;
 	private String template;
+	private String type;
 
 	
-	public GridColumn(String field, long width, String title, String template) {
+	public GridColumn(String field, long width, String title, String template, String type) {
 		this.field = field;
 		this.width = width;
 		this.title = title;
 		this.template = template;
+		this.type = type;
 	}
 
 	public static long getSerialversionuid() {
@@ -36,7 +38,12 @@ public class GridColumn implements Serializable{
 		return template;
 	}
 	
-	
-	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
 	
 }

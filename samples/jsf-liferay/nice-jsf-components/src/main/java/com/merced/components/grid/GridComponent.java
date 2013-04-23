@@ -3,18 +3,11 @@ package com.merced.components.grid;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.faces.application.ResourceDependencies;
-import javax.faces.application.ResourceDependency;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UIComponentBase;
 
 
-@ResourceDependencies({
-	@ResourceDependency(library = "js", name = "kendo.all.min.js"),
-	@ResourceDependency(library = "js", name = "customers.js"),
-	@ResourceDependency(library = "css", name = "kendo.common.min.css"),
-	@ResourceDependency(library = "css", name = "kendo.default.min.css")
-	})
+
 @FacesComponent(value = "nice.GridComponent")
 public class GridComponent extends UIComponentBase implements Serializable {
 

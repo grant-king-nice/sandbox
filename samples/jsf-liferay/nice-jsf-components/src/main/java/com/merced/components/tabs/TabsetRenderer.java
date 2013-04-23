@@ -3,14 +3,18 @@ package com.merced.components.tabs;
 import java.io.IOException;
 import java.util.Iterator;
 
+import javax.faces.application.ResourceDependencies;
+import javax.faces.application.ResourceDependency;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import javax.faces.render.FacesRenderer;
 import javax.faces.render.Renderer;
 
-import com.merced.components.RenderUtils;
-
+@ResourceDependencies({
+	@ResourceDependency(library = "js", name = "jquery.tabify.js"),
+	@ResourceDependency(library = "css", name = "tabify.css")
+	})
 @FacesRenderer(componentFamily = "nice.liferay.portal", rendererType = "com.nice.TabsetRenderer")
 public class TabsetRenderer  extends Renderer {
 
@@ -64,7 +68,6 @@ public class TabsetRenderer  extends Renderer {
 		writer.startElement("script", null);
 		writer.write("$(document).ready(function () {");
 		writer.write("$('#menu').tabify();");
-		//writer.write("alert('sdsdsd');");
 		writer.write("});");
 		writer.endElement("script");
 	}

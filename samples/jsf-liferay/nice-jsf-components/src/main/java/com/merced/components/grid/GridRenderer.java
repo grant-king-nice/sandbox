@@ -4,13 +4,21 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.faces.application.ResourceDependencies;
+import javax.faces.application.ResourceDependency;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import javax.faces.render.FacesRenderer;
 import javax.faces.render.Renderer;
 
-@FacesRenderer(componentFamily = "nice.liferay.portal", rendererType = "com.nice.GridRenderer")
+@ResourceDependencies({
+	@ResourceDependency(library = "js", name = "kendo.all.min.js"),
+	@ResourceDependency(library = "js", name = "customers.js"),
+	@ResourceDependency(library = "css", name = "kendo.common.min.css"),
+	@ResourceDependency(library = "css", name = "kendo.default.min.css")
+	})
+@FacesRenderer(componentFamily = "nice.liferay.portal", rendererType = "com.nice.GridRenderer", renderKitId="HTML_BASIC")
 public class GridRenderer extends Renderer {
 
 	@Override

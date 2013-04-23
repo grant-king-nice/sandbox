@@ -16,12 +16,12 @@ public class UserListBean {
 
 		List<GridColumn> columns = new ArrayList<GridColumn>();
 		
-		columns.add(new GridColumn("firstName", 90, "First Name", null));
-		columns.add(new GridColumn("lastName", 90, "Last Name", null));
-		columns.add(new GridColumn("city", 100, "City", null));
-		columns.add(new GridColumn("title", 50, "Title", null));
+		columns.add(new GridColumn("firstName", 90, "First Name", null, "string"));
+		columns.add(new GridColumn("lastName", 90, "Last Name", null, "string"));
+		columns.add(new GridColumn("city", 100, "City", null, "string"));
+		columns.add(new GridColumn("title", 50, "Title", null, "string"));
 		//columns.add(new GridColumn("BirthDate", 100, "Birth Date", "#= kendo.toString(BirthDate,\"dd MMMM yyyy\") #"));
-		columns.add(new GridColumn("age", 50, "Age", null));
+		columns.add(new GridColumn("age", 50, "Age", null, "number"));
 		
 		return columns;
 	}
