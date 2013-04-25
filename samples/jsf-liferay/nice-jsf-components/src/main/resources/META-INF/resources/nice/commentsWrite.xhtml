@@ -2,28 +2,45 @@
 <ui:component xmlns="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:nicecc="http://java.sun.com/jsf/composite/nice"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aui="http://liferay.com/faces/aui"
 	xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-transitional.xsd">
 
 	<cc:interface>
 		<cc:attribute name="lable" required="false" />
+		
 	</cc:interface>
 
 	<cc:implementation>
 		
-			<h:panelGroup layout="block">
-				${cc.attrs.lable} : <h:inputText value="#{commentBackingBean.value}"/>
-				
-				<h:commandButton action="#{commentBackingBean.addComment()}" value="Comment">
-					<f:ajax execute="@form" render="outputComments"/>
-				</h:commandButton>
-				
+			<h:outputStylesheet library="css" name="comments.css" target="head" />
+			
+			<h:panelGroup layout="block" styleClass="comments-custom-body">
+				<h:panelGrid columns="1"> 
+					
+					<h:panelGroup>
+						${cc.attrs.lable}
+					</h:panelGroup>
+					
+					<h:panelGroup>
+						<h:inputTextarea rows="3" value="#{commentBackingBean.value}" styleClass="comments-text-box"/>
+					</h:panelGroup>
+					
+					<h:commandButton action="#{commentBackingBean.addComment()}" value="Comment" styleClass="comments-button">
+						<f:ajax execute="@form" render="outputComments"/>
+					</h:commandButton>
+					
+				</h:panelGrid>
 				
 				<h:panelGroup id="outputComments" layout="block">
 					<table>
 						<ui:repeat value="#{commentBackingBean.comments}" var="comment">
 							<tr>
-								<td>#{comment}</td>
+								<td>
+									<div class="comment-entry">
+										<nicecc:commentEntry comment="#{comment}"/>
+									</div>
+								</td>
 							</tr>					
 						</ui:repeat>
 					</table>

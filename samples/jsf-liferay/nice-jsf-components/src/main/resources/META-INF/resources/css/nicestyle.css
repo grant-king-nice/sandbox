@@ -1,4 +1,8 @@
 
+.portlet-custom-body{
+	background: url("#{resource['images/body.gif']}") repeat scroll 0 0 #F4F4F4;
+    max-width: 1800px;
+}
 
 .header-text {
 	color:red;
@@ -18,8 +22,38 @@
 }
 
 .generic-head-column{
-	width:70%;
+	width:50%;
 }
 .custom-head-class{
-	width:30%;
+	width:25%;
+}
+.generic-head-column-channels{
+	width:25%;
+	vertical-align: top;
+}
+
+.portlet-custom-body-content{
+ 	background-color: white;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px 10px;
+    padding: 10px;
+}
+
+
+
+.generic-head-column-channels img {
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#portlet_niceuserlist_WAR_nicejsfportlet.portlet div.portlet-content{
+	padding: 1px !important;
+}
+
+
+#portlet_nicejsfsample_WAR_nicejsfportlet div.portlet-content{
+	padding: 1px !important;
 }

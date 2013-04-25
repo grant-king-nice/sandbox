@@ -1,7 +1,8 @@
 <f:view xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:nicecc="http://java.sun.com/jsf/composite/nice">
 
 
 	<h:head>
@@ -10,33 +11,42 @@
 
 	<f:subview id="portletForm">
 			
+			<h:panelGroup styleClass="portlet-custom-body" layout="block">
 			<h:panelGroup>
-				<h:panelGrid columns="2" columnClasses="generic-head-column,custom-head-class"  styleClass="generic-head-table">
-					<h:panelGroup>
-						<p class="generic-rate">Rate this NICE portlet</p>
-					</h:panelGroup>
+				<h:panelGrid columns="2" columnClasses="custom-head-class,generic-head-column-channels"  styleClass="generic-head-table">
 					<h:panelGroup>
 						<ui:insert name="header" />
 					</h:panelGroup>
+					<h:panelGroup>
+						<nicecc:channels/>
+					</h:panelGroup>
+					
 				</h:panelGrid>
 			</h:panelGroup>
 			
-			
-			<h:panelGroup>
+			<h:panelGroup layout="block" styleClass="portlet-custom-body-content">
 				<ui:insert name="mainBody" />
 			</h:panelGroup>
 			
-			
-			
 			<h:panelGroup>
-				<BR/>
-				This is a generic footer...
-				<BR/>
-				<h:messages/>
-				<BR/>
-				<ui:insert name="footer" />
+				<h:panelGrid columns="2" columnClasses="custom-head-class,generic-head-column-channels"  styleClass="generic-head-table">
+				
+					<h:panelGroup layout="block">
+						<ui:insert name="footer" />
+					</h:panelGroup>
+				
+					<h:panelGroup layout="block">
+						<h:panelGroup layout="block" style="float:right;padding-right:10px;">
+							<h:graphicImage url="#{resource['images/stars.png']}"/>
+						</h:panelGroup>
+					</h:panelGroup>
+				
+				
+				</h:panelGrid>
+			
+				
 			</h:panelGroup>
-
+			</h:panelGroup>
 	</f:subview>
 </f:view>
 
