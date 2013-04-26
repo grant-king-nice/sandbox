@@ -3,21 +3,22 @@ package com.merced.components;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.liferay.faces.portal.context.LiferayFacesContext;
+import com.merced.system.renderkitresolver.UserProvider;
 
 
 @Component
-
 public class CommentBackingBean {
 
 	private String value;
 	private List<CommentValue> comments = new ArrayList<CommentValue>();
-	private LiferayFacesContext liferayFacesContext = LiferayFacesContext.getInstance();
+	@Autowired
+	private UserProvider userProvider;
 	
 	public void addComment(){
-		CommentValue comment = new CommentValue(liferayFacesContext.getUser().getFullName(), value);
+		CommentValue comment = new CommentValue(userProvider.getCurrentUser().getFullName(), value);
 		comments.add(comment);
 	}
 

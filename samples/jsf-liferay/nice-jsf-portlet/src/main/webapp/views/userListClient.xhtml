@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:nicecc="http://java.sun.com/jsf/composite/nice"
+   xmlns:nice="http://nice/web-component"
+   template="/decorators/portlets/portletTemplate.xhtml">
+
+
+   <ui:define name="header">
+	  <h:outputStylesheet library="niceres" name="umresources.css" target="head" />
+      <h:outputText styleClass="bike-lable" value="Please enter a search term :"/><h:inputText/>
+   </ui:define>
+   
+   <ui:define name="mainBody">
+   		<h:panelGroup layout="block">
+   		
+    		<nice:grid columns="#{userListBean.columns}" groupable="true" sortable="true">
+    			<nice:clientdata/>
+    		</nice:grid>
+    		
+    	</h:panelGroup>
+   </ui:define>
+
+   <ui:define name="footer">
+   	 <h:form>
+      	<nicecc:commentsWrite lable="Please comment on user list" />
+      </h:form>
+   </ui:define>
+
+</ui:composition>

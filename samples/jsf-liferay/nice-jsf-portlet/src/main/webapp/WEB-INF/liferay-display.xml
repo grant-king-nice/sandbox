@@ -4,6 +4,9 @@
 
  	<category name="nice.sample">
  		<portlet id="nice-jsf-sample" />
+ 		<portlet id="nice-user-list" />
+ 		<portlet id="nice-user-list-client" />
+ 		<portlet id="nice-sample-start" />
  	</category>
  	
  </display>

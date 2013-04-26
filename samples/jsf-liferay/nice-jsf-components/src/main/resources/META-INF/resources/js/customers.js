@@ -18,12 +18,12 @@ function createRandomData(count) {
 
         data.push({
             Id: i + 1,
-            FirstName: firstName,
-            LastName: lastName,
-            City: city,
-            Title: title,
-            BirthDate: birthDate,
-            Age: age
+            firstName: firstName,
+            lastName: lastName,
+            city: city,
+            title: title,
+            birthDate: birthDate,
+            age: age
         });
     }
     return data;
