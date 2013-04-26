@@ -10,11 +10,31 @@
    </ui:define>
    
    <ui:define name="mainBody">
-   		...add body content here...
+   		
+		<h:form>
+			<f:ajax disabled="true">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="Tree Name : " />
+					<h:inputText value="#{demoTreeInfoBackingBean.treeName}" />
+					<h:outputLabel value="Tree Description : " />
+					<h:inputText value="#{demoTreeInfoBackingBean.treeDescription}" />
+				</h:panelGrid>
+			</f:ajax>
+			
+			<f:ajax render="@form" execute="@form">
+				<h:commandButton action="#{demoTreeInfoBackingBean.saveTree()}" value="Save Tree" />
+			</f:ajax>
+		</h:form>
+
+
    </ui:define>
 
    <ui:define name="footer">
-		...footer content here
+		
+		<h:form>
+			<nicecc:commentsWrite lable="Your comments are useful to us" />
+		</h:form>
+		
    </ui:define>
 
 </ui:composition>

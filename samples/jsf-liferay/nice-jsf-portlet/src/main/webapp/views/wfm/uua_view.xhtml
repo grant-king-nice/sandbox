@@ -14,8 +14,11 @@
 
 	<h:body styleClass="jsf2-portlet ltr">
 		<h:form>
+			<f:ajax render="@form" execute="@form">
+				<h:commandButton action="#{userBeanWFM.save()}" value="Save" styleClass="umSaveButton"/>
+			</f:ajax>
 			<f:ajax disabled="true">
-				<h:panelGrid columns="2">
+				<h:panelGrid columns="2" columnClasses="umLableColumn,umEntryColumn">
 					<h:outputLabel value="Field 1 : " />
 					<h:inputText value="#{userBeanWFM.wfmCustomField1}" />
 					<h:outputLabel value="Field 2 : " />
@@ -23,9 +26,6 @@
 				</h:panelGrid>
 			</f:ajax>
 			
-			<f:ajax render="@form" execute="@form">
-				<h:commandButton action="#{userBeanWFM.save()}" value="Save" />
-			</f:ajax>
 		</h:form>
 	</h:body>
 </f:view>
