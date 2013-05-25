@@ -11,7 +11,6 @@
 
 	<modules>
 		<module>nice-jsf-components</module>
-		<module>nice-jsf-composite-portlet</module>
 		<module>nice-jsf-portlet</module>
 	</modules>
 
