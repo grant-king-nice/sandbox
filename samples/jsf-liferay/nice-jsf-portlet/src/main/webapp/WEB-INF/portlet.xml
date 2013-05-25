@@ -26,6 +26,30 @@
 		</security-role-ref>
 	</portlet>
 	
+	
+	<portlet>
+		<portlet-name>nice-poc-sample</portlet-name>
+		<display-name>NICE POC portlet</display-name>
+		<portlet-class>javax.portlet.faces.GenericFacesPortlet</portlet-class>
+		<init-param>
+			<name>javax.portlet.faces.defaultViewId.view</name>
+			<value>/views/poc_portlet.xhtml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>NICE POC portlet</title>
+			<short-title>NICE POC portlet</short-title>
+			<keywords>NICE POC portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	
+	
 	<portlet>
 		<portlet-name>nice-sample-start</portlet-name>
 		<display-name>NICE Sample Start</display-name>
