@@ -23,6 +23,10 @@ define(function(require) {
 
     function onLoad(){
 
+    	
+    	
+    	
+    	
 //		
 //		 var parentContainer2 = $("#component2"); 
 //		var comp2 = new Comp2();
