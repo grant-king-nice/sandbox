@@ -22,6 +22,24 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
+	<servlet>
+		<servlet-name>requirejs</servlet-name>
+		<servlet-class>com.liferay.portal.kernel.servlet.PortalDelegateServlet</servlet-class>
+		<init-param>
+			<param-name>servlet-class</param-name>
+			<param-value>com.nice.liferay.servlet.RequireJS</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sub-context</param-name>
+			<param-value>requirejs</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+ 	<servlet-mapping>
+		<servlet-name>requirejs</servlet-name>
+		<url-pattern>/requirejs</url-pattern>
+	</servlet-mapping>
 
 
     <security-constraint>

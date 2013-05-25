@@ -13,6 +13,23 @@
 		</component>
 	</tag>
 
+	<tag>
+		<tag-name>component1</tag-name>
+		<component>
+			<component-type>nice.Component1</component-type>
+			<renderer-type>com.nice.Comp1Renderer</renderer-type>
+		</component>
+	</tag>
+
+	<tag>
+		<tag-name>component2</tag-name>
+		<component>
+			<component-type>nice.Component2</component-type>
+			<renderer-type>com.nice.Comp2Renderer</renderer-type>
+		</component>
+	</tag>
+
+
     <tag>
 		<tag-name>tabset</tag-name>
 		<component>
