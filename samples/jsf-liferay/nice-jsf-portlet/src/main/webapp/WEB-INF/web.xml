@@ -56,24 +56,6 @@
 	</security-role>
 	
 	
-	<servlet>
-        <servlet-name>userlist</servlet-name>
-        <servlet-class>
-            com.liferay.portal.kernel.servlet.PortalDelegateServlet
-        </servlet-class>
-        <init-param>
-            <param-name>servlet-class</param-name>
-            <param-value>
-                org.springframework.web.servlet.DispatcherServlet
-            </param-value>
-        </init-param>
-        <init-param>
-            <param-name>sub-context</param-name>
-            <param-value>userlist</param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-	
 	
 	
 	<listener>
@@ -83,8 +65,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath:portlet-context.xml,
-			classpath:lar-spring-context.xml
+			classpath:portlet-context.xml
 		</param-value>
 	</context-param>
 	

@@ -3,23 +3,6 @@
 
 <liferay-portlet-app>
 
-	<portlet>
-		<portlet-name>nice_npm_uua</portlet-name>
-		<use-default-template>false</use-default-template>
-		<instanceable>false</instanceable>
-		<remoteable>true</remoteable>
-		<ajaxable>false</ajaxable>
-		<add-default-resource>true</add-default-resource>
-	</portlet>
-
-	<portlet>
-		<portlet-name>nice_wfm_uua</portlet-name>
-		<use-default-template>false</use-default-template>
-		<instanceable>false</instanceable>
-		<remoteable>true</remoteable>
-		<ajaxable>false</ajaxable>
-		<add-default-resource>true</add-default-resource>
-	</portlet>
 
 
 

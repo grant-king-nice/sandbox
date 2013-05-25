@@ -2,33 +2,30 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
    xmlns:ui="http://java.sun.com/jsf/facelets"
    xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
-   xmlns:nicecc="http://java.sun.com/jsf/composite/nice"
    xmlns:nice="http://nice/web-component"
    template="/decorators/portlets/portletTemplate.xhtml">
 
-   <ui:define name="header">
-	  	...add header content here...
-   </ui:define>
+   <ui:define name="header"/>
+	  
    
    <ui:define name="mainBody">
-   
-			
+
+		Component 1 is placed here:
+		<nice:component1/>
 		
-	Component 1 is placed here:ddd
-	<nice:component1/>
+		<BR/><BR/><BR/>
+		
+		Component 2 is placed here:
+		<nice:component2/>
 	
-	<BR/><BR/><BR/>
+		<BR/><BR/><BR/>
 	
-	Component 2 is placed here:
-	<nice:component2/>
-
-
+		Second component 1 is placed here:
+		<nice:component1/>
 
    </ui:define>
 
-   <ui:define name="footer">
+   <ui:define name="footer"/>
 	
-   </ui:define>
-
 </ui:composition>
 

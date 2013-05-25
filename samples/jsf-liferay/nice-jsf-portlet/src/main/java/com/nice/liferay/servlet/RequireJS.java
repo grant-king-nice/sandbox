@@ -22,7 +22,6 @@ public class RequireJS extends HttpServlet {
 			throws ServletException, IOException {
 
 		String url = req.getRequestURI();
-		System.out.println(url);
 		
 		url = url.replace("/delegate/requirejs/", "");
 		resp.setContentType(getContentType(url));
@@ -32,14 +31,9 @@ public class RequireJS extends HttpServlet {
 			url = url+".js";
 		}
 		
-		InputStream is = this.getClass().getClassLoader()
-				.getResourceAsStream(url);
+		InputStream is = getClass().getClassLoader().getResourceAsStream(url);
 
 		stream(is, resp.getOutputStream());
-
-		
-
-		
 		resp.flushBuffer();
 		resp.getOutputStream().close();
 	}
