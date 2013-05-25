@@ -5,13 +5,6 @@
 	version="2.0">
 	<namespace>http://nice/web-component</namespace>
 
-	<tag>
-		<tag-name>liferay-portlet</tag-name>
-		<component>
-			<component-type>nice.LiferayDynamicPortletComponent</component-type>
-			<renderer-type>com.nice.LiferayDynamicPortletComponent</renderer-type>
-		</component>
-	</tag>
 
 	<tag>
 		<tag-name>component1</tag-name>
@@ -30,40 +23,5 @@
 	</tag>
 
 
-    <tag>
-		<tag-name>tabset</tag-name>
-		<component>
-			<component-type>nice.TabsetComponent</component-type>
-			<renderer-type>com.nice.TabsetRenderer</renderer-type>
-		</component>
-	</tag>
-    <tag>
-		<tag-name>tab</tag-name>
-		<component>
-			<component-type>nice.TabComponent</component-type>
-			<renderer-type>com.nice.TabRenderer</renderer-type>
-		</component>
-	</tag>
-    <tag>
-		<tag-name>grid</tag-name>
-		<component>
-			<component-type>nice.GridComponent</component-type>
-			<renderer-type>com.nice.GridRenderer</renderer-type>
-		</component>
-	</tag>
-    <tag>
-		<tag-name>clientdata</tag-name>
-		<component>
-			<component-type>nice.ClientDataSourceComponent</component-type>
-			<renderer-type>com.nice.ClientDataSourceRenderer</renderer-type>
-		</component>
-	</tag>
-    <tag>
-		<tag-name>remotedata</tag-name>
-		<component>
-			<component-type>nice.RemoteDataSourceComponent</component-type>
-			<renderer-type>com.nice.RemoteDataSourceRenderer</renderer-type>
-		</component>
-	</tag>
 
 </facelet-taglib>

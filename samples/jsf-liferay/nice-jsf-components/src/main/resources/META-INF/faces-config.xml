@@ -4,20 +4,13 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
 	<application>
-		<view-handler>com.merced.system.renderkitresolver.DynamicRenderKitViewHandler</view-handler>
 		<default-render-kit-id>HTML_BASIC</default-render-kit-id>
-		
 	</application>
 
 	<factory>
 		<external-context-factory>com.merced.system.resourceresolver.JarResourceApplicationFactory</external-context-factory>
-	<render-kit-factory></render-kit-factory>
 	</factory>
-
-	<render-kit>
-		<render-kit-id>HTML_MOBILE</render-kit-id>
-		<render-kit-class>com.merced.system.renderkitresolver.NiceRenderKit</render-kit-class>
-	</render-kit>
+	
 
 </faces-config>
 
